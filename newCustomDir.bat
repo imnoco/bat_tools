@@ -1,4 +1,7 @@
 @echo off
+rem 注释
+rem https://github.com/imnoco/bat_tools
+rem https://seonoco.com/windows-create-custom-new-folder
 
 title 新建自定义文件夹 power by seonoco.com
 
