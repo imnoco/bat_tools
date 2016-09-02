@@ -1,12 +1,18 @@
 @echo off
-rem 注释
-rem https://github.com/imnoco/bat_tools
-rem https://seonoco.com/windows-create-custom-new-folder
 
+rem ### 利用恒不等进行段注释
+if 1==0 (
+https://github.com/imnoco/bat_tools
+https://seonoco.com/windows-create-custom-new-folder
+)
+
+rem ### 标题
 title 新建自定义文件夹 power by seonoco.com
 
+rem ### 颜色
 color 2f
 
+rem ### 数组
 set Arr[1]=10寸杂志册
 set Arr[2]=10寸水晶册
 set Arr[3]=10寸花千骨
@@ -21,17 +27,14 @@ set Arr[11]=18寸水晶册
 set Arr[12]=18寸花千骨
 
 
-
-
-rem this is to for user to choose
+rem ### choice函数方法
 :choice
 
-color 2f
 echo ################################################
 echo #
 echo #      #功能 # 新建自定义文件夹
 echo #      #作者 # seonoco.com
-echo #      #用法 # 输入序号创建指定文件夹:
+echo #      #用法 # 输入序号创建指定文件夹
 echo #
 
 set "x=1"
@@ -48,10 +51,12 @@ echo #
 echo ################################################
 
 
+
 set /P num=输入序号:
 
-if /I "%num%"=="q" goto quit
+rem ### 根据输入执行相应的方法
 
+if /I "%num%"=="q" goto quit
 if defined Arr[%num%] (
 call echo %%Arr[%num%]%%
 call md %%Arr[%num%]%%
