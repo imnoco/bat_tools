@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\新建相册文件夹]
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\新建相册文件夹\command]
+@="C:\\bat_tools\\newCustromDir\\newCustomDir.bat"
